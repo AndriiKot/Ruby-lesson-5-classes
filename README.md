@@ -21,10 +21,42 @@ p manager1.class.superclass   # Person
 p manager1.class.ancestors    # [Manager,Person,Object,Kernel,BasicObject]
 ```
 irb -r ./classes_for_ruby1.rb
+
 ```cmd
 <Manager: ... @name = "Mr. Joe",@age = 30>
  Manager
  Person
 [Manager,Person,Object,Kernel,BasicObject]
 ```
+____
+____
+
+```ruby
+class Animal 
+end
+
+p Animal.ancestors    #[Animal,Object,Kernel,BasicObject]
+
+module Kernel
+  def my_method1 = puts "Hello from Kernel!"
+end
+
+
+class Animal
+  def self.hello 
+   puts "Hello my name is #{self.name}"
+   my_method1
+  end
+end
+
+p Animal.hello  
+```
+
+```cmd
+# Hello my name is Animal
+# Hello from Kernel!
+```
+____
+____
+
 
