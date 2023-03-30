@@ -14,6 +14,6 @@ class Person
 end
 
 oxi = name.new 'Oxi'
-p oxi.name  "Oxi"
+p oxi.name     # "Oxi"
 
  
